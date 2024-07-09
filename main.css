@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-color: #800a01;
+    --second-color: #282120;
+}
+
+section {
+    padding: 50px 10%;
+}
+
+*::selection {
+    color: #9b1e1e;
+    background: var(--main-color);
+}
+
+img {
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px;
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+
+
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #c9c9c9;
+    gap: 1rem;
+}
+
+.home-text {
+    flex: 1 1 17rem;
+}
+
+.home-img {
+    flex: 1 1 18rem;
+}
+
+.home-img img {
+    animation: animate 3s linear infinite;
+}
+
+
+.home-text span {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.home-text h1 {
+    font-size: 3.2rem;
+    color: var(--main-color);
+    font-weight: bolder;
+}
+
+.home-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--second-color);
+    text-transform: uppercase;
+    margin: 0.5rem 0 1.4rem;
+}
+
+.heading {
+    text-align: center;
+    
+}
+
+.heading span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+
+.heading h1 {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.sinopse-img {
+    flex: 1 1 21rem;
+}
+
+.sinopse-text {
+    flex: 1 1 21rem;
+    text-align: right;
+}
+
+.sinopse-text h2 {
+    font-size: 1.2rem;
+    color: var(--second-color);
+}
+
+deliver-text p {
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+
+.card-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* ajuste para dispositivos com largura até 768px */
+
+    .home-text {
+        margin-top: 40px;
+        /* ajuste o valor conforme necessário */
+    }
+
+    header {
+        padding: 11px 4%;
+    }
+
+    #menu-icon {
+        display: initial;
+    }
+
+    header .navbar {
+
+        position: absolute;
+        /* Assim fica abaixo do menu, senao podemos abrir no topo do menu mudando pra 0 */
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 4px 4px rgba(14, 55, 54, 0.14);
+        /* caso queira remover a "linha" borda superior */
+        border-top: 2px solid var(blueviolet);
+        transition: 0.2s;
+        text-align: left;
+    }
+
+    /* Menu aparece quando recebe a classe "active" */
+    header .navbar.active {
+        display: flex;
+    }
+
+
+    header .navbar a {
+        padding: 0.5rem;
+        display: block;
+        color: var(#c9c9c9);
+    }
+
+    .home {
+
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .home-text span {
+        font-size: 0.9rem;
+    }
+
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
+
+
+    .home-text h2 {
+        font-size: 1.2rem;
+    }
+
+    figure figcaption {
+        --_i: 0%;
+    }
+}
